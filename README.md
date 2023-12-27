@@ -2,5 +2,4 @@
 
 ## Links
 
-- [Book](https://pdhoff.github.io/book/)
-- [Bayesian Methods Interpret Data Better \- YouTube](https://www.youtube.com/watch?v=YyohWpjl6KU)
+[Spaceship Titanic \| Kaggle](https://www.kaggle.com/competitions/spaceship-titanic/code?competitionId=34377&sortBy=voteCount)
