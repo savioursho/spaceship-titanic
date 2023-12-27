@@ -1,0 +1,3 @@
+jupyterbook/_build/
+
+*.pyc

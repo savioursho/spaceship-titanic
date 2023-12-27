@@ -1,0 +1,9 @@
+{
+    "notebook.formatOnCellExecution": true,
+    "notebook.formatOnSave.enabled": false,
+    "python.analysis.autoFormatStrings": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true
+    }
+}
