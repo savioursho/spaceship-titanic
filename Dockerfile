@@ -18,3 +18,10 @@ COPY pyproject.toml ./
 
 # パッケージのインストール
 RUN poetry install
+
+# sqliteのインストール
+RUN apt-get update && \
+    apt-get install -y sqlite3
+
+# sqliteの設定ファイルをコピー
+COPY .sqliterc /root/

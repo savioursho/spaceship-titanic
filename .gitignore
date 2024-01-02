@@ -1,3 +1,9 @@
+# mlflow
+/mlruns
+
+# hydra
+/outputs
+
 # データフォルダ
 /data
 
