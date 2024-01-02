@@ -163,6 +163,11 @@ def main(cfg: DictConfig):
         profile_comparison = profile_train.compare(profile_test)
         log_profile_to_mlflow(profile_comparison)
 
+    mlflow.log_artifacts(
+        hydra.core.hydra_config.HydraConfig.get().runtime.output_dir,
+        "hydra_outpus",
+    )
+
 
 if __name__ == "__main__":
     main()
