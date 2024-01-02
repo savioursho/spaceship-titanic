@@ -165,7 +165,7 @@ def main(cfg: DictConfig):
 
     mlflow.log_artifacts(
         hydra.core.hydra_config.HydraConfig.get().runtime.output_dir,
-        "hydra_outpus",
+        "hydra_outputs",
     )
 
 

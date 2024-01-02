@@ -98,6 +98,11 @@ def main(cfg: DictConfig):
     with timer.measure("dump profile"):
         log_profile_to_mlflow(profile_train)
 
+    mlflow.log_artifacts(
+        hydra.core.hydra_config.HydraConfig.get().runtime.output_dir,
+        "hydra_outputs",
+    )
+
 
 if __name__ == "__main__":
     main()
