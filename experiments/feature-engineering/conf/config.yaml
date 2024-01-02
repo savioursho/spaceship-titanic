@@ -1,0 +1,5 @@
+root_dir: ${oc.env:ROOT_DIR}
+db_dir: ${oc.env:SQLITE_DB_DIR}
+experiment_name: "feature-engineering"
+id_cols:
+  - passenger_id
