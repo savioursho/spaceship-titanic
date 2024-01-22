@@ -1,0 +1,18 @@
+experiment_name: "modeling"
+root_dir: ${oc.env:ROOT_DIR}
+db_dir: ${oc.env:SQLITE_DB_DIR}
+model_dir: ${root_dir}/data/outputs/models
+submit_dir: ${root_dir}/data/outputs/submit
+target: 
+  target:
+    - transported
+id_cols:
+  - passenger_id
+scorings:
+  - accuracy
+  - roc_auc
+defaults:
+  - feature: feat00
+  - model: lgbm
+  - cv: kfold
+

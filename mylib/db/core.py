@@ -186,8 +186,20 @@ class DataBase:
         return [db for db in self.databases if db.stem != self.main_db_name]
 
     @property
+    def schemas(self):
+        return [db.stem for db in self.databases]
+
+    @property
     def engine(self):
         return create_engine_from_sqlite_path(self.main_database, echo=self.echo)
+
+    @property
+    def metadata(self):
+        metadata = sqlalchemy.MetaData()
+        with self.connect() as connection:
+            for schema in self.schemas:
+                metadata.reflect(connection, schema=schema)
+        return metadata
 
     @contextlib.contextmanager
     def connect(self):

@@ -1,0 +1,10 @@
+model_class: LGBMClassifier
+params:
+  num_leaves: 31
+  learning_rate: 0.1
+  subsample: 0.6
+  subsample_freq: 1
+  colsample_bytree: 0.6
+  random_state: 0
+  force_row_wise: true
+preprocessor: downcast_dtype

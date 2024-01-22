@@ -21,4 +21,5 @@ class Timer:
         start = time.time()
         logging_func(f"[{name}] start.")
         yield
-        logging_func(f"[{name}] done in {time.time() - start:.0f} s.")
+        self.duration = time.time() - start
+        logging_func(f"[{name}] done in {self.duration:.0f} s.")
